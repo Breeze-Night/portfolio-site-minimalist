@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --light-glow-color: rgba(0, 110, 255, 0.5);
+  --dark-glow-color: rgba(221, 229, 255, 0.5);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(236, 234, 234);
+  color: rgb(34, 34, 34);
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 70px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+  margin: 50px 0 10px 0;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+a {
+  color: rgb(0, 110, 255);
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+a:hover {
+  font-size: 21px;
+  text-shadow: 0 0 5px var(--light-glow-color);
+}
+
+.dark a {
+  color: rgb(221, 229, 255);
+}
+
+.dark a:hover {
+  text-shadow: 0 0 5px var(--dark-glow-color);
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  padding: 30px;
+}
+
+.switch {
+  width: 80px;
+  height: 40px;
+  background-color: rgb(41, 40, 40);
+  border-radius: 40px;
+  position: relative;
+}
+
+.flicker {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+    inset -4px -4px 4px rgb(195 196 197 / 90%);
+  transition: 0.3s;
+}
+
+.dark {
+  background-color: rgb(53, 52, 52);
+  transition: 0.3s;
+}
+
+/* if there is dark class, the child with class flicker */
+.dark .flicker {
+  transform: translateX(40px);
+}
+
+.dark > * {
+  color: rgb(235, 232, 232);
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+.sun {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(230, 255, 8);
+  box-shadow: 0 0 5px 2px rgba(230, 255, 8, 0.5);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-text {
+  width: 80%;
+  padding: 30px;
+  text-align: center;
+}
+
+.square {
+  width: 98%;
+  margin: 1%;
+  height: 350px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dark .square {
+  background-color: rgb(75, 74, 74);
+  color: white;
+}
+
+#image-search-app .bg-image {
+  background-image: url("images/image-search-app-ss.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#chromatic-essence .bg-image {
+  background-image: url("images/chromatic-essence-ss.png");
+  background-size: cover;
+}
+
+#css-pp .bg-image {
+  background-image: url("images/pp-ss.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+#currency-now .bg-image {
+  background-image: url("images/currency-now-ss.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-image {
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.sub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 30px;
+  background-color: rgb(214, 220, 214);
+}
+
+.dark footer {
+  background-color: rgb(28, 35, 28);
+}
+
+footer p {
+  margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socials div {
+  width: 2rem;
+  height: 2rem;
+}
+
+.custom-svg {
+  transition: 0.3s;
+}
+
+.dark .custom-svg {
+  fill: antiquewhite;
+}
+
+.custom-svg:hover {
+  fill: rgb(52, 100, 222);
+}
+
+@media only screen and (min-width: 970px) {
+  .square {
+    width: 48%;
+    margin: 1%;
+    height: 600px;
+  }
+
+  .main {
+    height: 80vh;
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  .main-text {
+    width: 50%;
+    text-align: start;
+  }
+
+  .decor {
+    position: relative;
+    width: 50%;
+    height: 350px;
+  }
+
+  .cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+  }
+
+  .cube:before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+  }
+
+  .cube::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+  }
+
+  #javascript {
+    left: 60px;
+    bottom: 100px;
+    background-image: url("images/logos/javascript-logo.png");
+    background-size: cover;
+    background-color: rgb(255, 255, 0);
+    box-shadow: -60px 60px 20px rgb(50 50 50 / 15%);
+  }
+
+  #javascript:before {
+    background-color: rgb(181, 181, 44);
+  }
+
+  #javascript:after {
+    background-color: rgb(229, 229, 32);
+  }
+
+  #html {
+    left: 200px;
+    top: 10px;
+    background-image: url("images/logos/HTML5_logo.png");
+    background-size: cover;
+    background-color: rgb(255, 150, 58);
+    box-shadow: -100px 100px 20px rgb(50 50 50 / 15%);
+  }
+
+  #html:before {
+    background-color: rgb(192, 100, 19);
+  }
+
+  #html:after {
+    background-color: rgb(228, 115, 17);
+  }
+
+  #go {
+    left: 270px;
+    bottom: 10px;
+    background-image: url("images/logos/go-logo.png");
+    background-size: contain;
+    background-color: rgb(117, 255, 255);
+    box-shadow: -50px 50px 20px rgb(50 50 50 / 15%);
+  }
+
+  #go:before {
+    background-color: rgb(66, 199, 199);
+  }
+
+  #go:after {
+    background-color: rgb(71, 226, 226);
+  }
+
+  #css {
+    right: 75px;
+    bottom: 160px;
+    background-image: url("images/logos/CSS_logo.png");
+    background-size: cover;
+    background-color: rgb(32, 177, 250);
+    box-shadow: -80px 80px 20px rgb(50 50 50 / 15%);
+  }
+
+  #css:before {
+    background-color: rgb(6, 126, 186);
+  }
+
+  #css:after {
+    background-color: rgb(11, 154, 226);
+  }
+}
